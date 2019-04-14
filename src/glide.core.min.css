@@ -1,4 +1,5 @@
 .glide {
+    text-align: center;
     position: relative;
     width: 1200px;
     height: 200px;
@@ -66,10 +67,12 @@
     direction: rtl
 }
 
-.glide__slide {
-    transition: .4s ease all !important;
+.glide__slide,
+.glide__slide>img {
+    transition: 0.5s ease all;
 }
 
-.glide__slide--active {
-    transform: scale(1.2);
+.glide__slide--active>img {
+    transform: scale(1.3);
+    transition: 0.5s ease all;
 }
