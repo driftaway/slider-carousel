@@ -5,7 +5,7 @@ var glide = new Glide(".glide", {
   startAt: 1,
   gap: 30,
   perTouch: false,
-  animationDuration: 400,
+  animationDuration: 150,
   dragThreshold: 10,
   swipeThreshold: 10,
   touchRatio: 1,
