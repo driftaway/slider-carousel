@@ -1,7 +1,6 @@
 .glide {
-    text-align: center;
     position: relative;
-    width: 1200px;
+    width: 1000px;
     height: 200px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -12,7 +11,8 @@
 }
 
 .glide__track {
-    overflow: hidden
+    overflow: hidden;
+    text-align: center;
 }
 
 .glide__slides {
@@ -67,12 +67,33 @@
     direction: rtl
 }
 
-.glide__slide,
-.glide__slide>img {
+.glide__slide>img,
+.glide__slide--clone>img {
     transition: 0.5s ease all;
+    width: 130px;
+    height: 75px
 }
 
 .glide__slide--active>img {
     transform: scale(1.3);
     transition: 0.5s ease all;
+}
+
+.glide__arrows {
+    text-align: center;
+    position: absolute;
+}
+
+.glide__arrow {
+    position: absolute;
+}
+
+.glide__arrow--right {
+    left: 1050px;
+    top: 90px
+}
+
+.glide__arrow--left {
+    left: -70px;
+    top: 90px
 }
