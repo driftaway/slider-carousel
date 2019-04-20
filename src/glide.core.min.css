@@ -1,9 +1,44 @@
 .glide {
+    font-family: monospace;
     position: relative;
     width: 1000px;
     height: 200px;
     box-sizing: border-box;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .glide {
+        width: 320px;
+    }
+
+    .glide__slide {
+        width: 100px !important;
+        height: 120px !important;
+    }
+
+    .glide__slide>img,
+    .glide__slide--clone>img {
+        width: 105px !important;
+        height: 65px !important;
+    }
+
+    .glide__arrow--right {
+        left: 180px !important;
+        top: -50px !important;
+    }
+
+    .glide__arrow--left {
+        left: 100px !important;
+        top: -50px !important;
+    }
+
+    .carBackground {
+        position: absolute;
+        bottom: 75px !important;
+        left: 88px !important;
+        width: 150px !important;
+    }
 }
 
 .glide * {
@@ -46,6 +81,10 @@
     -webkit-tap-highlight-color: transparent
 }
 
+.glide__slide:hover {
+    cursor: grab;
+}
+
 .glide__slide a {
     user-select: none;
     -webkit-user-drag: none;
@@ -75,8 +114,9 @@
 }
 
 .glide__slide--active>img {
-    transform: scale(1.3);
+    transform: scale(1.4);
     transition: 0.65s ease all;
+
 }
 
 .glide__arrows {
@@ -85,15 +125,38 @@
 }
 
 .glide__arrow {
+    cursor: pointer;
     position: absolute;
+    border: none;
+    outline: none;
+    background: #FFEB3B;
+    font-size: 24px;
+    padding: 10px 16px;
+    color: white;
 }
 
 .glide__arrow--right {
     left: 1050px;
-    top: 90px
+    top: 75px
 }
 
 .glide__arrow--left {
     left: -75px;
-    top: 90px
+    top: 75px
+}
+
+.carBackground {
+    position: absolute;
+    bottom: 68px;
+    left: 416px;
+    width: 170px
+}
+
+.glide__slides>li::before {
+    content: none !important;
+}
+
+div.glide__track>ul>li>p {
+    position: relative !important;
+    padding-top: 30px !important;
 }
