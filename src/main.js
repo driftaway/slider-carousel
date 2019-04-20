@@ -33,14 +33,6 @@
       showCurrentCarSection()
   })
 
-  $('.iconPrev').click(() => {
-      $('.glide__arrow--left').click()
-  })
-
-  $('.iconNext').click(() => {
-      $('.glide__arrow--right').click()
-  })
-
   $('.glide__slide').mousedown(() => {
       $('.glide__slide').css('cursor', 'grabbing')
   })
@@ -51,24 +43,4 @@
       showCurrentCarSection()
       checkIfCarMatches()
       $('.glide__slide').css('cursor', 'grab')
-  })
-
-  $('.glide__slide').touchend(() => {
-      $('.glide__slide--active').click()
-  })
-
-  $('.glide__slide').touchend(() => {
-      $('.glide__slide--active').click()
-  })
-
-  $('.glide__slide').touchstart(() => {
-      $carBackground.hide()
-      $carBackground.fadeIn(250)
-      showCurrentCarSection()
-  })
-
-  $('.glide__slide').touchstart(() => {
-      $carBackground.hide()
-      $carBackground.fadeIn(250)
-      showCurrentCarSection()
   })
